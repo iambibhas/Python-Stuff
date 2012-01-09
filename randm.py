@@ -1,12 +1,12 @@
 import sys
 import random
 
-def get_random_string(count):
+def get_random_string(length=8):
     """Returns a string of random characters of given length."""
     string = ''
     avail_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*?><._abcdefghijklmnopqrstuvwxyz1234567890'
 
-    for i in range(0, count):
+    for i in range(0, length):
         randm[0] = random.randrange(0, len(avail_chars))
         randm[1] = random.randrange(0, len(avail_chars))
         rand = random.randrange(0,2)
