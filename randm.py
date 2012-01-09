@@ -1,9 +1,8 @@
 import sys
 import random
 
-count = int(sys.argv[1])
-randm = {}
 def get_random_string(count):
+    """Returns a string of random characters of given length."""
     string = ''
     avail_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*?><._abcdefghijklmnopqrstuvwxyz1234567890'
 
@@ -16,7 +15,7 @@ def get_random_string(count):
     return string
 
 def levenshtein(a,b):
-    "Calculates the Levenshtein distance between a and b."
+    """Calculates the Levenshtein distance between a and b."""
     n, m = len(a), len(b)
     if n > m:
         # Make sure n <= m, to use O(min(n,m)) space
@@ -34,6 +33,3 @@ def levenshtein(a,b):
             current[j] = min(add, delete, change)
 
     return current[n]
-
-random_string = get_random_string(count)
-print random_string
